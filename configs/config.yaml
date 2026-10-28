@@ -1,0 +1,84 @@
+# LungSense configuration. Every script reads this file; change values here, not in code.
+seed: 42
+
+source:
+  physionet_check_url: https://physionet.org/files/mimiciv/
+  kaggle_slug: adityamahimkar/iqothnccd-lung-cancer-dataset
+  kaggle_search: "iq-oth nccd"
+  official_page: https://data.mendeley.com/datasets/bhmdr45bh2/4
+  # Facts quoted from the official Mendeley Data page (read 2026-10-28); not computed here.
+  official:
+    title: The IQ-OTH/NCCD lung cancer dataset
+    version: V4
+    published: "2023-05-02"
+    doi: 10.17632/bhmdr45bh2.4
+    licence: CC BY 4.0
+    licence_url: https://creativecommons.org/licenses/by/4.0/
+    institution: Iraq-Oncology Teaching Hospital / National Center for Cancer Diseases (IQ-OTH/NCCD)
+    collected: three months in fall 2019
+    scanner: Siemens SOMATOM
+    citation: "alyasriy, hamdalla; AL-Huseiny, Muayed (2023), The IQ-OTH/NCCD lung cancer dataset, Mendeley Data, V4, doi: 10.17632/bhmdr45bh2.4"
+    documented_images: 1190
+    documented_cases: 110
+    documented_cases_per_class: {malignant: 40, benign: 15, normal: 55}
+
+paths:
+  raw_dir: data/raw
+  source_file: data/SOURCE.txt
+  image_index: data/image_index.csv
+  cohort_summary: data/cohort_summary.json
+  splits: data/splits.json
+  model_file: models/imaging_efficientnet_b0.pth
+  embeddings_file: models/train_embeddings.npz
+  results_dir: results
+  figures_dir: results/figures
+  gradcam_dir: results/gradcam
+
+classes: [normal, benign, malignant]
+
+cohort:
+  # Only the standard 512x512 slices are used: every wider image in the source is a zoomed
+  # reconstruction from the malignant class, which would let the model learn the format.
+  required_size: [512, 512]
+
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+grouping:
+  # Pseudo-patient grouping (no patient IDs in this source). See docs/DECISIONS.md.
+  thumb_size: 64
+  # Per class, the highest link threshold on this grid whose group count does not exceed the
+  # source's stated number of cases for that class.
+  threshold_min: 0.50
+  threshold_max: 0.95
+  threshold_step: 0.01
+
+imaging:
+  backbone: efficientnet_b0
+  image_size: 224
+  # none | equalize | body_mask_equalize. Raw intensity histograms alone separate malignant
+  # slices almost perfectly, and Grad-CAM on an equalise-only model pointed at the scanner table
+  # for malignant predictions (results/shortcut_baseline.json, docs/DECISIONS.md), so the main
+  # model sees only the body, histogram-equalised inside the body.
+  preprocess: body_mask_equalize
+  batch_size: 32
+  epochs: 40
+  patience: 8
+  lr: 0.0001   # selected by scripts/03a_lr_sweep.py (results/lr_sweep.json)
+  lr_grid: [0.0003, 0.0001, 0.00003]   # scripts/03a_lr_sweep.py, validation split only
+  weight_decay: 0.0001
+  fast_epochs: 2
+
+eval:
+  bootstrap: 1000
+  ci_level: 95
+  fixed_specificity: 0.90   # reported as "sensitivity at this specificity"
+  rule_out_sensitivity: 0.95
+  rule_in_specificity: 0.95
+
+gradcam:
+  n_correct: 6
+  n_wrong: 6
+  border_fraction: 0.10

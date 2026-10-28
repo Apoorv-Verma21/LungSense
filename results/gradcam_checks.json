@@ -1,0 +1,144 @@
+{
+  "n_test_images_checked": 166,
+  "border_band_fraction_of_image_area": 0.35427295918367346,
+  "mean_border_mass": 0.1277698667268325,
+  "share_peak_in_border": 0.060240963855421686,
+  "mean_outside_body_mass": 0.19663140153041087,
+  "n_correct_examples": 6,
+  "n_wrong_examples": 6,
+  "n_wrong_available": 39,
+  "examples": [
+    {
+      "file": "00_correct_true-normal_pred-normal.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (159).jpg",
+      "true": "normal",
+      "pred": "normal",
+      "p_malignant": 0.0915408805012703,
+      "correct": true,
+      "border_mass": 0.6667941808700562,
+      "outside_body_mass": 0.9919564723968506,
+      "peak_in_border": true
+    },
+    {
+      "file": "01_correct_true-normal_pred-normal.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (328).jpg",
+      "true": "normal",
+      "pred": "normal",
+      "p_malignant": 0.07388883084058762,
+      "correct": true,
+      "border_mass": 0.0926617756485939,
+      "outside_body_mass": 0.20142711699008942,
+      "peak_in_border": false
+    },
+    {
+      "file": "02_correct_true-benign_pred-benign.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Bengin cases/Bengin case (42).jpg",
+      "true": "benign",
+      "pred": "benign",
+      "p_malignant": 0.27469688653945923,
+      "correct": true,
+      "border_mass": 0.17742639780044556,
+      "outside_body_mass": 0.39803045988082886,
+      "peak_in_border": false
+    },
+    {
+      "file": "03_correct_true-benign_pred-benign.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Bengin cases/Bengin case (45).jpg",
+      "true": "benign",
+      "pred": "benign",
+      "p_malignant": 0.16198381781578064,
+      "correct": true,
+      "border_mass": 0.14637494087219238,
+      "outside_body_mass": 0.33258381485939026,
+      "peak_in_border": false
+    },
+    {
+      "file": "04_correct_true-malignant_pred-malignant.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Malignant cases/Malignant case (518).jpg",
+      "true": "malignant",
+      "pred": "malignant",
+      "p_malignant": 0.9662383794784546,
+      "correct": true,
+      "border_mass": 0.07517633587121964,
+      "outside_body_mass": 0.08501996845006943,
+      "peak_in_border": false
+    },
+    {
+      "file": "05_correct_true-malignant_pred-malignant.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Malignant cases/Malignant case (129).jpg",
+      "true": "malignant",
+      "pred": "malignant",
+      "p_malignant": 0.9054604172706604,
+      "correct": true,
+      "border_mass": 0.058027852326631546,
+      "outside_body_mass": 0.07876352965831757,
+      "peak_in_border": false
+    },
+    {
+      "file": "06_wrong_true-normal_pred-malignant.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (120).jpg",
+      "true": "normal",
+      "pred": "malignant",
+      "p_malignant": 0.43280550837516785,
+      "correct": false,
+      "border_mass": 0.07827889174222946,
+      "outside_body_mass": 0.21544142067432404,
+      "peak_in_border": false
+    },
+    {
+      "file": "07_wrong_true-normal_pred-benign.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (303).jpg",
+      "true": "normal",
+      "pred": "benign",
+      "p_malignant": 0.1938658207654953,
+      "correct": false,
+      "border_mass": 0.2079668641090393,
+      "outside_body_mass": 0.3016853332519531,
+      "peak_in_border": false
+    },
+    {
+      "file": "08_wrong_true-normal_pred-benign.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (49).jpg",
+      "true": "normal",
+      "pred": "benign",
+      "p_malignant": 0.14541108906269073,
+      "correct": false,
+      "border_mass": 0.08541105687618256,
+      "outside_body_mass": 0.170393168926239,
+      "peak_in_border": false
+    },
+    {
+      "file": "09_wrong_true-benign_pred-normal.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Bengin cases/Bengin case (36).jpg",
+      "true": "benign",
+      "pred": "normal",
+      "p_malignant": 0.009380596689879894,
+      "correct": false,
+      "border_mass": 0.07190589606761932,
+      "outside_body_mass": 0.160551056265831,
+      "peak_in_border": false
+    },
+    {
+      "file": "10_wrong_true-normal_pred-malignant.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (335).jpg",
+      "true": "normal",
+      "pred": "malignant",
+      "p_malignant": 0.34788748621940613,
+      "correct": false,
+      "border_mass": 0.005764584057033062,
+      "outside_body_mass": 0.18075069785118103,
+      "peak_in_border": false
+    },
+    {
+      "file": "11_wrong_true-normal_pred-benign.png",
+      "source_image": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2/The IQ-OTHNCCD lung cancer dataset/The IQ-OTHNCCD lung cancer dataset/Normal cases/Normal case (304).jpg",
+      "true": "normal",
+      "pred": "benign",
+      "p_malignant": 0.15364667773246765,
+      "correct": false,
+      "border_mass": 0.2757416069507599,
+      "outside_body_mass": 0.3668179512023926,
+      "peak_in_border": false
+    }
+  ]
+}

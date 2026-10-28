@@ -1,0 +1,66 @@
+{
+  "labelled_images_found": 1097,
+  "excluded_identical_files_with_conflicting_labels": 0,
+  "excluded_non_standard_size": 61,
+  "excluded_non_standard_size_per_class": {
+    "malignant": 60,
+    "normal": 1
+  },
+  "excluded_non_standard_size_dimensions": {
+    "506x331": 1,
+    "511x404": 1,
+    "623x512": 31,
+    "801x512": 28
+  },
+  "included_images": 1036,
+  "included_images_per_class": {
+    "malignant": 501,
+    "normal": 415,
+    "benign": 120
+  },
+  "pseudo_patient_groups": 109,
+  "splits": {
+    "train": {
+      "images": 722,
+      "groups": 72,
+      "images_per_class": {
+        "malignant": 348,
+        "normal": 295,
+        "benign": 79
+      },
+      "groups_per_class": {
+        "benign": 10,
+        "malignant": 27,
+        "normal": 35
+      }
+    },
+    "val": {
+      "images": 148,
+      "groups": 21,
+      "images_per_class": {
+        "malignant": 67,
+        "normal": 59,
+        "benign": 22
+      },
+      "groups_per_class": {
+        "benign": 2,
+        "malignant": 7,
+        "normal": 12
+      }
+    },
+    "test": {
+      "images": 166,
+      "groups": 16,
+      "images_per_class": {
+        "malignant": 86,
+        "normal": 61,
+        "benign": 19
+      },
+      "groups_per_class": {
+        "benign": 3,
+        "malignant": 6,
+        "normal": 7
+      }
+    }
+  }
+}

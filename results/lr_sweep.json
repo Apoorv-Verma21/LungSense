@@ -1,0 +1,24 @@
+{
+  "selection": "best validation macro AUROC",
+  "trials": [
+    {
+      "lr": 0.0003,
+      "best_val_macro_auroc": 0.8460488767708935,
+      "best_epoch": 1,
+      "epochs_run": 9
+    },
+    {
+      "lr": 0.0001,
+      "best_val_macro_auroc": 0.8480039535052984,
+      "best_epoch": 5,
+      "epochs_run": 13
+    },
+    {
+      "lr": 3e-05,
+      "best_val_macro_auroc": 0.8178053964123141,
+      "best_epoch": 6,
+      "epochs_run": 14
+    }
+  ],
+  "selected_lr": 0.0001
+}

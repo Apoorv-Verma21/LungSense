@@ -1,0 +1,2 @@
+model,auroc,auroc_ci_low,auroc_ci_high,auprc,auprc_ci_low,auprc_ci_high,sens_at_90_spec,sens_at_90_spec_ci_low,sens_at_90_spec_ci_high,n_test
+CT imaging only (EfficientNet-B0),0.9998546511627907,0.9990880938105501,1.0,0.9998663458968191,0.9988651951675892,1.0000000000000002,1.0,1.0,1.0,166

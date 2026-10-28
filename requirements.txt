@@ -1,0 +1,17 @@
+# Pinned from the build environment (Python 3.12, Windows, CUDA 12.4).
+# GPU wheels: pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+# CPU only: replace the two torch lines with torch==2.6.0 and torchvision==0.21.0.
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+numpy==2.5.4
+pandas==3.1.0
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+pillow==13.0.0
+PyYAML==6.0.3
+requests==2.34.2
+streamlit==1.66.1
+kaggle==2.2.5
+kagglehub==1.0.3
+pytest==9.2.0

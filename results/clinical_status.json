@@ -1,0 +1,5 @@
+{
+  "available": false,
+  "source": "B",
+  "reason": "Source B contains CT slice images and class labels only; it has no clinical variables. No clinical model was trained and no other dataset was brought in."
+}

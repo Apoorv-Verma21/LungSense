@@ -1,0 +1,40 @@
+{
+  "source": "B",
+  "dataset": "IQ-OTH/NCCD lung cancer dataset (Kaggle mirror)",
+  "access_date": "2026-10-28",
+  "download": {
+    "method": "kagglehub (anonymous, public dataset); local cache reused",
+    "slug": "adityamahimkar/iqothnccd-lung-cancer-dataset",
+    "data_root": "data/raw/kagglehub/datasets/adityamahimkar/iqothnccd-lung-cancer-dataset/versions/2",
+    "kaggle_version": "2"
+  },
+  "image_set_sha256": "016ce17c8dd33b4acf519768a2e6b4abdefa6a22e941969edc3f7d4797389fcb",
+  "n_images": 1097,
+  "class_counts": {
+    "benign": 120,
+    "malignant": 561,
+    "normal": 416
+  },
+  "folders": {
+    "Bengin cases": 120,
+    "Malignant cases": 561,
+    "Normal cases": 416
+  },
+  "ignored_unlabelled_images": 197,
+  "ignored_folders": [
+    "Test cases"
+  ],
+  "image_sizes": {
+    "506x331": 1,
+    "511x404": 1,
+    "512x512": 1036,
+    "623x512": 31,
+    "801x512": 28
+  },
+  "image_modes": {
+    "RGB": 1097
+  },
+  "exact_duplicate_images": 86,
+  "exact_duplicate_sets": 43,
+  "duplicate_sets_spanning_classes": 0
+}

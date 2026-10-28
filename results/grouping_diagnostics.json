@@ -1,0 +1,33 @@
+{
+  "method": "within-class consecutive case-number linking on 64x64 thumbnail correlation, plus near-duplicate and identical-file linking; per-class threshold = highest grid value whose group count does not exceed the source's stated cases",
+  "link_threshold": {
+    "benign": 0.67,
+    "malignant": 0.79,
+    "normal": 0.85
+  },
+  "near_duplicate_threshold": 0.97,
+  "n_groups": 109,
+  "groups_per_class": {
+    "benign": 15,
+    "malignant": 40,
+    "normal": 54
+  },
+  "documented_cases_per_class": {
+    "malignant": 40,
+    "benign": 15,
+    "normal": 55
+  },
+  "group_size_quantiles": {
+    "0.0": 1.0,
+    "0.5": 7.0,
+    "0.9": 23.0,
+    "1.0": 35.0
+  },
+  "consecutive_similarity_quantiles": {
+    "0.05": 0.5928735733032227,
+    "0.25": 0.9554386138916016,
+    "0.5": 0.9891757965087891,
+    "0.75": 0.9964816570281982,
+    "0.95": 0.9996047735214233
+  }
+}

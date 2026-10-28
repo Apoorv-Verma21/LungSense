@@ -1,0 +1,8 @@
+{
+  "youden_threshold": 0.6244019269943237,
+  "rule_out_threshold": 0.6609123945236206,
+  "rule_in_threshold": 0.6244019269943237,
+  "rule_out_target_sensitivity": 0.95,
+  "rule_in_target_specificity": 0.95,
+  "fit_on": "validation split, calibrated malignant probability"
+}

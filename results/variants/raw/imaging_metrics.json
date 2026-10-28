@@ -1,0 +1,127 @@
+{
+  "model": "efficientnet_b0",
+  "task": "malignant vs (normal + benign); 3-class head",
+  "variant": "raw",
+  "preprocess": "none",
+  "device": "cuda",
+  "fast_mode": false,
+  "epochs_run": 10,
+  "best_epoch": 2,
+  "best_val_macro_auroc": 0.8555333595618902,
+  "temperature": 0.8694378743002872,
+  "n_images": {
+    "train": 722,
+    "val": 148,
+    "test": 166
+  },
+  "n_groups": {
+    "train": 72,
+    "val": 21,
+    "test": 16
+  },
+  "test_positive_images": 86,
+  "bootstrap": {
+    "resamples": 1000,
+    "unit": "pseudo-patient group",
+    "interval": "percentile 95%"
+  },
+  "thresholds": {
+    "youden_threshold": 0.6244019269943237,
+    "rule_out_threshold": 0.6609123945236206,
+    "rule_in_threshold": 0.6244019269943237,
+    "rule_out_target_sensitivity": 0.95,
+    "rule_in_target_specificity": 0.95,
+    "fit_on": "validation split, calibrated malignant probability"
+  },
+  "test": {
+    "auroc": {
+      "value": 1.0,
+      "ci_low": 0.9999999999999999,
+      "ci_high": 1.0,
+      "n_valid": 1000
+    },
+    "auprc": {
+      "value": 1.0,
+      "ci_low": 0.9999999999999998,
+      "ci_high": 1.0000000000000002,
+      "n_valid": 1000
+    },
+    "sensitivity": {
+      "value": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n_valid": 1000
+    },
+    "specificity": {
+      "value": 0.9125,
+      "ci_low": 0.676923076923077,
+      "ci_high": 1.0,
+      "n_valid": 1000
+    },
+    "sens_at_90_spec": {
+      "value": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n_valid": 1000
+    },
+    "macro_ovr_auroc_3class": {
+      "value": 0.9493202170140417,
+      "ci_low": 0.8675050442772063,
+      "ci_high": 0.9995118053989022,
+      "n_valid": 1000
+    },
+    "per_class_recall": {
+      "normal": {
+        "value": 0.3442622950819672,
+        "ci_low": 0.1025,
+        "ci_high": 0.6472616632860039,
+        "n_valid": 1000
+      },
+      "benign": {
+        "value": 0.7368421052631579,
+        "ci_low": 0.5,
+        "ci_high": 1.0,
+        "n_valid": 966
+      },
+      "malignant": {
+        "value": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n_valid": 1000
+      }
+    },
+    "ece_positive_class": 0.0974818946771234
+  },
+  "test_nll": {
+    "before_scaling": 0.4639306962490082,
+    "after_scaling": 0.45642971992492676
+  },
+  "test_ece_malignant": {
+    "before_scaling": 0.10601976881903338,
+    "after_scaling": 0.0974818946771234
+  },
+  "confusion_matrix": {
+    "labels": [
+      "normal",
+      "benign",
+      "malignant"
+    ],
+    "counts": [
+      [
+        21,
+        30,
+        10
+      ],
+      [
+        4,
+        14,
+        1
+      ],
+      [
+        0,
+        0,
+        86
+      ]
+    ]
+  }
+}

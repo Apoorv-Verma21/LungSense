@@ -1,0 +1,9 @@
+/data/
+models/*.pth
+models/*.npz
+kaggle.json
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

@@ -1,0 +1,32 @@
+{
+  "none": {
+    "description": "logistic regression on 32-bin intensity histograms (no spatial information), malignant vs rest",
+    "input_preprocess": "none",
+    "test_auroc": {
+      "value": 0.9947674418604651,
+      "ci_low": 0.9783098808897831,
+      "ci_high": 1.0,
+      "n_valid": 1000
+    }
+  },
+  "equalize": {
+    "description": "logistic regression on 32-bin intensity histograms (no spatial information), malignant vs rest",
+    "input_preprocess": "equalize",
+    "test_auroc": {
+      "value": 0.7783430232558141,
+      "ci_low": 0.5460562681325393,
+      "ci_high": 0.949929659221368,
+      "n_valid": 1000
+    }
+  },
+  "body_mask_equalize": {
+    "description": "logistic regression on 32-bin intensity histograms (no spatial information), malignant vs rest",
+    "input_preprocess": "body_mask_equalize",
+    "test_auroc": {
+      "value": 0.8219476744186046,
+      "ci_low": 0.6288259021753453,
+      "ci_high": 0.9493072448277556,
+      "n_valid": 1000
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "group_overlap_between_splits": {
+    "train&val": 0,
+    "train&test": 0,
+    "val&test": 0
+  },
+  "val": {
+    "n_images": 148,
+    "max_train_similarity_quantiles": {
+      "0.5": 0.8264045715332031,
+      "0.9": 0.9037966728210449,
+      "0.99": 0.9550080895423889,
+      "1.0": 0.9688968658447266
+    },
+    "n_at_or_above_link_threshold": 117,
+    "n_near_duplicate_of_train": 0
+  },
+  "test": {
+    "n_images": 166,
+    "max_train_similarity_quantiles": {
+      "0.5": 0.7888199090957642,
+      "0.9": 0.8726808428764343,
+      "0.99": 0.8990640640258789,
+      "1.0": 0.949406623840332
+    },
+    "n_at_or_above_link_threshold": 81,
+    "n_near_duplicate_of_train": 0
+  }
+}
