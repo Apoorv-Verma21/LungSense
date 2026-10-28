@@ -16,7 +16,6 @@ from PIL import Image, UnidentifiedImageError
 
 from src.utils.common import cfg_path, load_config, read_json
 
-DISCLAIMER = "Research/education demo. Not a medical device. Not for clinical use."
 MAX_UPLOAD_MB = 10
 PAGES = [
     "Overview",
@@ -379,7 +378,6 @@ def page_model_card() -> None:
         not_available("Model card", "python scripts/05_render_docs.py")
 
 
-st.warning(DISCLAIMER, icon=":material/warning:")
 requested = st.query_params.get("page")
 page = st.sidebar.radio("Page", PAGES, index=PAGES.index(requested) if requested in PAGES else 0, key="page")
 {
@@ -392,5 +390,3 @@ page = st.sidebar.radio("Page", PAGES, index=PAGES.index(requested) if requested
     "Similar cases": page_similar,
     "Model card and limitations": page_model_card,
 }[page]()
-st.divider()
-st.caption(DISCLAIMER)
